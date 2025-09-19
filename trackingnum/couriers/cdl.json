@@ -1,0 +1,29 @@
+{
+  "name": "CDL",
+  "courier_code": "cdl",
+  "tracking_numbers": [
+    {
+      "name": "CDL Last Mile Solutions",
+      "regex": [
+        "\\s*(?=.*[a-z])(?<PackageId>([0-9a-f]\\s*){10,10})\\s*"
+      ],
+      "tracking_url": "https://ship.cdldelivers.com/Xcelerator/Tracking/Tracking?packageitemrefno=%s",
+      "validation": {
+      },
+      "test_numbers": {
+        "valid": [
+          "216a478bfe",
+          "a000000000",
+          " a 0 0 0 0 0 0 0 0 0",
+          "7f907 b81c1"
+        ],
+        "invalid": [
+          "7F907B92C1",
+          "1234number",
+          "zzzzzzzzzz",
+          "0000000000"
+        ]
+      }
+    }
+  ]
+}
